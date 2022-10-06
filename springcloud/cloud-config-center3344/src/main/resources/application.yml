@@ -8,18 +8,27 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:Mnsx/springcloud-config.git
+          uri: https://github.com/Mnsx/SpringCloud-StudyProject.git
           search-paths:
             - springcloud-config
-          strict-host-key-checking: false
-          private-key: |
-            -----begin rsa private key-----
-            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiL9O/7QpBPXCsq8IWBO+I1Ka38IGrJ64zy7PIS5QWl5PbuJnGk326pAF1fIoGN8emkWAT9ft6rysYvouSxJTYXa2f3LdvYI0D4R+x2rkRtSLqApmSua2KkAAHGaKw7aZ2JoFo50XDUDPBpTERirID/VRzFUdNC01zBTkoLM+hl+91t9NMMaLTUIwHHNloLAmOm5zFtJTZkBQEcbCO7ln7be5gWNbNu6VFZ5VnRAuDFuXIqZ/Lwtl7d8quXEEIxtfaEhtBfneU3v2xEl/ErDZbQx/LfWeWT1nPok9uGdrokTehuiwncakMEP/31I+3HlN7beNyePgPJyrKXoKpfimo3ggQ4ns3rbKU0O0dWTeXNbmwGzY+FYOtOKnC7cmvG7cxmCiRCZ6M1ugLJkfQOpUMCkAFgmuuhutubFCkDyksXuwbugiIYkBL29rjYc/PmZosUaOaQWNIRJQ2gqzcD9oC40uxDLP+/0s5RywUMPCT0nhzbU0/JL2Kxfid4gIkWII7rmC04mXHpd6Mf1VLGCTPzNt99p948Bk+E9N/eA5fe+gaTiOLN9C/ptf4I9dzSn9NhaOZFOe3WIl8l+b2NSQUR85z3B0QrNwAigFkvkCio/b21mYDvOPA5XB194YA9thlQ5iqgEfZLdORdpWnzbmhD5wU/LMrQclwNrdR47r4iQ== xx1527030652@gmail.com
-            -----END RSA PRIVATE KEY-----
+          username: Mnsx
+          password: xkq771212XKQ
           skip-ssl-validation: true
       label: master
+  rabbitmq:
+    host: 192.168.32.129
+    port: 5672
+    username: root
+    password: 123123
+    virtual-host: center
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
