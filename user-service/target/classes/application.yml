@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://192.168.32.130:3306/cloud_user?useSSL=false
+    username: root
+    password: 123123
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: userService
+  cloud:
+    nacos:
+      server-addr: 192.168.32.130:8848
+      discovery:
+        cluster-name: CD
+
+mybatis:
+  type-aliases-package: cn.itcast.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    cn.itcast: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+pattern:
+  name: 本地application

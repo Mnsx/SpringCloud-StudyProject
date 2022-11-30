@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: userService
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.32.130:8848
+      config:
+        file-extension: yaml
+pattern:
+  name: 本地bootstrap
