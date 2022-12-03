@@ -7,7 +7,7 @@ spring:
     password: 123123
     driver-class-name: com.mysql.jdbc.Driver
   application:
-    name: orderService
+    name: orderservice
   cloud:
     nacos:
       server-addr: 192.168.32.130:8848
@@ -36,3 +36,9 @@ userService:
 #    config:
 #      default:
 #        loggerLevel: HEADERS
+# 开启使用httpclient作为feign的底层实现
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50

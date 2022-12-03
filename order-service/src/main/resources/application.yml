@@ -7,7 +7,7 @@ spring:
     password: 123123
     driver-class-name: com.mysql.jdbc.Driver
   application:
-    name: orderService
+    name: orderservice
   cloud:
     nacos:
       server-addr: 192.168.32.130:8848
