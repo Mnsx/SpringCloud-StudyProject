@@ -68,6 +68,11 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.itcast.hotel" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -77,8 +82,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HotelIndexTest.testBatchRequest">
-    <configuration name="HotelIndexTest.testAddDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HotelSearchTest.testHighlight">
+    <configuration name="HotelSearchTest.testBoolMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
       <extension name="coverage">
         <pattern>
@@ -87,14 +92,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelIndexTest" />
-      <option name="METHOD_NAME" value="testAddDocument" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelSearchTest" />
+      <option name="METHOD_NAME" value="testBoolMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelIndexTest.testBatchRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelSearchTest.testHighlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
       <extension name="coverage">
         <pattern>
@@ -103,14 +108,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelIndexTest" />
-      <option name="METHOD_NAME" value="testBatchRequest" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelSearchTest" />
+      <option name="METHOD_NAME" value="testHighlight" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelIndexTest.testDeleteDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelSearchTest.testMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +124,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelIndexTest" />
-      <option name="METHOD_NAME" value="testDeleteDocument" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelSearchTest" />
+      <option name="METHOD_NAME" value="testMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelIndexTest.testGetDocumentById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelSearchTest.testPageAndSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
       <extension name="coverage">
         <pattern>
@@ -135,14 +140,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelIndexTest" />
-      <option name="METHOD_NAME" value="testGetDocumentById" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelSearchTest" />
+      <option name="METHOD_NAME" value="testPageAndSort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelIndexTest.testUpdateDocumentById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelSearchTest.testTermMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
       <extension name="coverage">
         <pattern>
@@ -151,8 +156,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelIndexTest" />
-      <option name="METHOD_NAME" value="testUpdateDocumentById" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelSearchTest" />
+      <option name="METHOD_NAME" value="testTermMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -212,11 +217,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HotelIndexTest.testAddDocument" />
-      <item itemvalue="JUnit.HotelIndexTest.testGetDocumentById" />
-      <item itemvalue="JUnit.HotelIndexTest.testUpdateDocumentById" />
-      <item itemvalue="JUnit.HotelIndexTest.testDeleteDocument" />
-      <item itemvalue="JUnit.HotelIndexTest.testBatchRequest" />
+      <item itemvalue="JUnit.HotelSearchTest.testMatch" />
+      <item itemvalue="JUnit.HotelSearchTest.testTermMatch" />
+      <item itemvalue="JUnit.HotelSearchTest.testBoolMatch" />
+      <item itemvalue="JUnit.HotelSearchTest.testPageAndSort" />
+      <item itemvalue="JUnit.HotelSearchTest.testHighlight" />
       <item itemvalue="Spring Boot.OrderApplication" />
       <item itemvalue="Spring Boot.UserApplication1" />
       <item itemvalue="Spring Boot.UserApplication2" />
@@ -225,11 +230,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HotelIndexTest.testBatchRequest" />
-        <item itemvalue="JUnit.HotelIndexTest.testDeleteDocument" />
-        <item itemvalue="JUnit.HotelIndexTest.testGetDocumentById" />
-        <item itemvalue="JUnit.HotelIndexTest.testUpdateDocumentById" />
-        <item itemvalue="JUnit.HotelIndexTest.testAddDocument" />
+        <item itemvalue="JUnit.HotelSearchTest.testHighlight" />
+        <item itemvalue="JUnit.HotelSearchTest.testPageAndSort" />
+        <item itemvalue="JUnit.HotelSearchTest.testBoolMatch" />
+        <item itemvalue="JUnit.HotelSearchTest.testMatch" />
+        <item itemvalue="JUnit.HotelSearchTest.testTermMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +255,9 @@
       <workItem from="1670073024878" duration="477000" />
       <workItem from="1670232153865" duration="6119000" />
       <workItem from="1670243690489" duration="307000" />
+      <workItem from="1670472535959" duration="3511000" />
+      <workItem from="1670497368127" duration="8499000" />
+      <workItem from="1670926045518" duration="7573000" />
     </task>
     <servers />
   </component>

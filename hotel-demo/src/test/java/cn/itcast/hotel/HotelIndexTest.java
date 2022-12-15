@@ -91,6 +91,12 @@ public class HotelIndexTest {
     @Autowired
     private IHotelService hotelService;
 
+    /**
+     * 批量添加数据
+     * BulkRequest()
+     * 请求.add(new IndexRequest(索引名称)).id(唯一标识编号).source(JSON字符串, XContentType.JSON)
+     * bulk(请求， RequestOptions.DEFAULT)
+     */
     @Test
     public void testBatchRequest() throws IOException {
         BulkRequest request = new BulkRequest();
@@ -104,6 +110,11 @@ public class HotelIndexTest {
         client.bulk(request, RequestOptions.DEFAULT);
     }
 
+    /**
+     * 删除文档数据通过编号
+     * DeleteRequest(索引名称, id编号)
+     * delete(请求, RequestOptions.DEFAULT)
+     */
     @Test
     public void testDeleteDocument() throws IOException {
         DeleteRequest request = new DeleteRequest("hotel", "61083");
@@ -111,6 +122,12 @@ public class HotelIndexTest {
         client.delete(request, RequestOptions.DEFAULT);
     }
 
+    /**
+     * 更新文档数据通过编号
+     * UpdateRequest(索引名称, id编号)
+     * doc(字段, 数据...)
+     * update(请求, RequestOptions.DEFAULT)
+     */
     @Test
     public void testUpdateDocumentById() throws IOException {
         UpdateRequest request = new UpdateRequest("hotel", "61083");
@@ -120,6 +137,12 @@ public class HotelIndexTest {
         client.update(request, RequestOptions.DEFAULT);
     }
 
+    /**
+     * 查询文档通过编号
+     * GetRequest(索引名称, id编号)
+     * get(请求, RequestOptions.DEFAULT)
+     * 响应.getSourceAsString()得到数据得json字符串
+     */
     @Test
     public void testGetDocumentById() throws IOException {
         GetRequest request = new GetRequest("hotel", "61083");
@@ -131,6 +154,11 @@ public class HotelIndexTest {
         System.out.println(JSON.parseObject(json, HotelDoc.class));
     }
 
+    /**
+     * 添加文档
+     * IndexRequest(索引名称).id(文档唯一标识符).source(json字符串, XContentType.JSON)
+     * indices.exists(请求, RequestOptions.DEFAULT)
+     */
     @Test
     public void testAddDocument() throws IOException {
         Hotel hotel = hotelService.getById(61083);
@@ -145,6 +173,11 @@ public class HotelIndexTest {
         client.index(request, RequestOptions.DEFAULT);
     }
 
+    /**
+     * 判断是否存在索引
+     * GetIndexRequest(索引名称)
+     * indices.exists(请求, RequestOptions.DEFAULT)
+     */
     @Test
     public void testExistsHotelIndex() throws IOException {
         GetIndexRequest request = new GetIndexRequest("hotel");
@@ -152,22 +185,28 @@ public class HotelIndexTest {
         System.err.println(exists);
     }
 
+    /**
+     * 删除索引
+     * DeleteIndexRequest(索引名称)
+     * indices.delete(请求, RequestOptions.DEFAULT)
+     */
     @Test
     public void testDeleteHotelIndex() throws IOException {
         DeleteIndexRequest request = new DeleteIndexRequest("hotel");
         client.indices().delete(request, RequestOptions.DEFAULT);
     }
 
+    /**
+     * 创建索引
+     * CreateIndexRequest(索引名称)
+     * source(结构, XContentType.JSON)
+     * indices.create(请求, RequestOptions.DEFAULT)
+     */
     @Test
     public void testCreateHotelIndex() throws IOException {
         CreateIndexRequest request = new CreateIndexRequest("hotel");
         request.source(MAPPING_TEMPLATE, XContentType.JSON);
         client.indices().create(request, RequestOptions.DEFAULT);
-    }
-
-    @Test
-    public void testInit() {
-        System.out.println(client);
     }
 
     @BeforeEach
